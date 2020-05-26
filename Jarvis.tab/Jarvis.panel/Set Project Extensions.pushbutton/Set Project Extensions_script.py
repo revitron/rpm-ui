@@ -21,5 +21,5 @@ if not revitron.Document.isFamily():
     if 'extensions' in form.values:
         extensions = form.values['extensions']
         transaction = revitron.Transaction()
-        info.set('Extensions', extensions , 'MultilineText')
+        info.set('Jarvis Extensions', extensions , 'MultilineText')
         transaction.commit()
