@@ -10,12 +10,12 @@ if not revitron.Document.isFamily():
     
     components = [
             Label('Enter one extension per line like this:'),   
-            Label('"ui→https://repository.git" for UI extensions or "lib→https://repository.git" for libraries', Width=900),
-            TextBox('extensions', Text=info.get('Extensions'), TextWrapping=System.Windows.TextWrapping.Wrap, AcceptsTab=True, AcceptsReturn=True, Multiline=True, Height=300, Width=900),
+            Label('"ui→https://repository.git" for UI extensions or "lib→https://repository.git" for libraries', Width=600),
+            TextBox('extensions', Text=info.get('Extensions'), TextWrapping=System.Windows.TextWrapping.Wrap, AcceptsTab=True, AcceptsReturn=True, Multiline=True, Height=200, Width=600),
             Button('Save', Width=100, HorizontalAlignment=System.Windows.HorizontalAlignment.Right)
     ]
     
-    form = FlexForm('Title', components)
+    form = FlexForm('Jarvis Extensions', components)
     form.show()
         
     if 'extensions' in form.values:
