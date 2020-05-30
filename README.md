@@ -1,3 +1,3 @@
-# Jarvis System
+# Jarvis UI
 
-![](https://git.herzogdemeuron.com/m.dahmen/jarvis/-/raw/master/svg/jarvis-light.svg)
+![](https://raw.githubusercontent.com/revitron/jarvis/master/svg/jarvis-light.svg)
