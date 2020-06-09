@@ -5,7 +5,7 @@ import os
 import glob
 from revitron import _
 
-if not revitron.Document.isFamily():
+if not revitron.Document().isFamily():
 
     extManager = jarvis.ExtensionsManager()
     extManager.removeAll()
