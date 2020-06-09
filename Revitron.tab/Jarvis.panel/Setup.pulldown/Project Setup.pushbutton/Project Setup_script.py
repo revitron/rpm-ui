@@ -4,7 +4,7 @@ import System.Windows
 from rpw.ui.forms import FlexForm, TextBox, Button, Label
 from revitron import _
 
-if not revitron.Document.isFamily():
+if not revitron.Document().isFamily():
 
     info = _(revitron.DOC.ProjectInformation)
     
