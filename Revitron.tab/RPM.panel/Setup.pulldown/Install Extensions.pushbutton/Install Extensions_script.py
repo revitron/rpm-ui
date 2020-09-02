@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 import revitron
-import jarvis
+import rpm
 import os
 import glob
 from revitron import _
 
 if not revitron.Document().isFamily():
 
-    extManager = jarvis.ExtensionsManager()
+    extManager = rpm.ExtensionsManager()
     extManager.removeAll()
 
     info = _(revitron.DOC.ProjectInformation)
-    lines = info.get('Jarvis Extensions').split('\r\n')
+    lines = info.get('RPM Extensions').split('\r\n')
      
     for line in lines:
         
