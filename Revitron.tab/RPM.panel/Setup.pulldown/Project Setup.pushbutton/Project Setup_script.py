@@ -2,24 +2,22 @@
 import revitron
 import System.Windows
 from rpw.ui.forms import FlexForm, TextBox, Button, Label
-from revitron import _
+
 
 if not revitron.Document().isFamily():
 
-    info = _(revitron.DOC.ProjectInformation)
-    
-    components = [
-            Label('Enter one extension per line like this:'),   
-            Label('"ui → https://repository.git" for UI extensions or "lib → https://repository.git" for libraries', Width=600),
-            TextBox('extensions', Text=info.get('RPM Extensions'), TextWrapping=System.Windows.TextWrapping.Wrap, AcceptsTab=True, AcceptsReturn=True, Multiline=True, Height=200, Width=600),
-            Button('Save', Width=100, HorizontalAlignment=System.Windows.HorizontalAlignment.Right)
-    ]
-    
-    form = FlexForm('RPM Extensions', components)
-    form.show()
-        
-    if 'extensions' in form.values:
-        extensions = form.values['extensions']
-        transaction = revitron.Transaction()
-        info.set('RPM Extensions', extensions , 'MultilineText')
-        transaction.commit()
+	config = revitron.DocumentConfigStorage().get('rpm.extensions')
+	
+	components = [
+			Label('Enter one extension per line like this (note the tab after the extension type):', Width=600),   
+			Label('"ui   ⇥  https://repository.git" for UI extensions or\r\n"lib  ⇥  https://repository.git" for libraries', Height=50, Width=600),
+			TextBox('extensions', Text=config, TextWrapping=System.Windows.TextWrapping.Wrap, AcceptsTab=True, AcceptsReturn=True, Multiline=True, Height=200, Width=600),
+			Button('Save', Width=100, HorizontalAlignment=System.Windows.HorizontalAlignment.Right)
+	]
+	
+	form = FlexForm('RPM Extensions', components)
+	form.show()
+		
+	if 'extensions' in form.values:
+		revitron.DocumentConfigStorage().set('rpm.extensions', form.values.get('extensions'))
+		
