@@ -6,4 +6,4 @@ The [pyRevit](https://github.com/revitron/pyRevit) UI extension for the [Revitro
 ![GitHub top language](https://img.shields.io/github/languages/top/revitron/rpm-ui?color=222222)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/revitron/rpm-ui?color=222222)
 
-![](https://raw.githubusercontent.com/revitron/revitron/master/svg/revitron-readme.svg)
+![](https://raw.githubusercontent.com/revitron/rpm/master/svg/rpm-readme.svg)
