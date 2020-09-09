@@ -32,3 +32,7 @@ By using the RPM, it is possible to define dependecies &mdash; pyRevit extension
 ![](png/help.png)
 
 To only update installed extensions without re-installing them, the **Revitron > RPM > Setup > Update Extensions** button can be used.
+
+---
+
+&copy; 2020, Marc Anton Dahmen &mdash; MIT license
